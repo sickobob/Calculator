@@ -16,10 +16,12 @@ namespace Calculator
         {
             InitializeComponent();
             DataNums = dataNums;
-
+            if (dataNums != null) label1.Text = (dataNums.FirstNum + dataNums.SecondNum).ToString();
         }
+        static int count = 0;
      
         DataNums? DataNums;
+     
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -28,7 +30,11 @@ namespace Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            count++;
+            Close();
+            Form1 main = Owner as Form1;
+            if (main != null) main.label4.Text = count.ToString();
+           
         }
     }
 }
