@@ -98,8 +98,8 @@ namespace Calculator
              
                 frm.Owner = this;
                 frm.Text = "Результат сравнения";
-                if (firstNum > secondNum) frm.label1.Text = firstNum.ToString();
-                else if (secondNum < firstNum) frm.label1.Text = secondNum.ToString();
+                if (firstNum > secondNum) frm.label1.Text = $"Большее число--->{firstNum}";
+                else if (firstNum < secondNum) frm.label1.Text = $"Большее число--->{secondNum}";
                 else frm.label1.Text = "Числа равны";
                 frm.ShowDialog();
             }
